@@ -7,20 +7,22 @@ object ShowHideProgressDialog {
 
     var progressBar: ProgressDialog? = null;
 
-    fun show(show: Boolean,context: Context, message: String){
+    fun show(context: Context, message: String){
+
+
+        progressBar = ProgressDialog(context)
+        progressBar!!.setCancelable(true) //you can cancel it by pressing back button
+
+        progressBar!!.setMessage(message)
+        progressBar!!.setProgressStyle(ProgressDialog.STYLE_SPINNER)
+        progressBar!!.progress = 0 //initially progress is 0
+
+        progressBar!!.max = 100 //sets the maximum value 100
 
         if(!progressBar!!.isShowing) {
-            progressBar = ProgressDialog(context)
-            progressBar!!.setCancelable(true) //you can cancel it by pressing back button
-
-            progressBar!!.setMessage(message)
-            progressBar!!.setProgressStyle(ProgressDialog.STYLE_SPINNER)
-            progressBar!!.progress = 0 //initially progress is 0
-
-            progressBar!!.max = 100 //sets the maximum value 100
-
             progressBar!!.show() //displays the progress bar
         }
+
 
     }
 

@@ -1,0 +1,3 @@
+include ':ShowHideProgressDialog'
+include ':app'
+rootProject.name = "SmartProgressDialog"

@@ -3,7 +3,7 @@ package net.larntech.showhideprogressdialog
 import android.app.ProgressDialog
 import android.content.Context
 
-object showHideProgressDialog {
+object ShowHideProgressDialog {
 
     var progressBar: ProgressDialog? = null;
 

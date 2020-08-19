@@ -25,11 +25,14 @@ class MainActivity : AppCompatActivity() {
 
     fun showHideDialog(){
 
-        ShowHideProgressDialog.show(this,"Processing request ..."); //show dialog
 
+        val message = "Processing request ...";
+
+        ShowHideProgressDialog.show(this,message); //show dialog
         Handler().postDelayed(Runnable {
             ShowHideProgressDialog.hide() //hide progress after 5 seconds
         },5000);
+
     }
 
 }
